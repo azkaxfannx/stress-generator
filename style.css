@@ -1,0 +1,42 @@
+html {
+    background-color: black;
+}
+h1{
+    color: white;
+    text-align: center;
+}
+#nama-waifu {
+    color: yellow;
+    padding: 1%;
+}
+#template {
+    color: yellow;
+    padding-left: 1%;
+}
+#pilihan {
+    width: 100%;
+    height: 100%;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    padding-right: 10%;
+}
+button {
+    margin-right: 0.5%;
+}
+#isi-kopipasta {
+    color: yellow;
+    padding-left: 1%;
+}
+#hasil {
+    width: 1000px;
+    height: 350px;
+    border-style: solid;
+    border-color: aqua;
+}
+#hasilWaifu {
+    width: 955px;
+    height: 100px;
+    color: white;
+    padding: 2%;
+    cursor: pointer;
+}
