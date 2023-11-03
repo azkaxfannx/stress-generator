@@ -13,7 +13,7 @@ var btn12 = document.getElementById('btn12');
 var currentBotton = 1;
 
 function inputan() {
-    return document.getElementById('waifu').value.toUpperCase();
+    return document.getElementById('namaInput').value.toUpperCase();
 }
 
 function oncBtn1() {
@@ -166,5 +166,5 @@ function updateNamaWaifu() {
     }
 }
 
-var waifuInput = document.getElementById('waifu');
+var waifuInput = document.getElementById('namaInput');
 waifuInput.addEventListener('input', updateNamaWaifu);
