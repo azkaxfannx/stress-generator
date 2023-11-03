@@ -1,42 +1,128 @@
-html {
-    background-color: black;
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Press+Start+2P&family=Roboto:wght@300;400&display=swap');
+
+* {
+		font-family: Roboto;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
+		background-color: #11111b;
+	}
+
+@media screen and (max-width: 480px){
+	#hasil {
+		top: 20px;
+	}
 }
-h1{
-    color: white;
-    text-align: center;
+
+@media screen and (max-width: 1024px){
+	body {
+		width: 100%;
+		height: 100%;
+		font-size: 4vw;
+	}
+	#template #tombol button {
+		font-size: 40px;
+	}
+	#hasil {
+		margin-top: 7em;
+	}
 }
-#nama-waifu {
-    color: yellow;
-    padding: 1%;
+
+body {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
+
+#nama {
+	position: relative;
+	margin: 1px;
+}
+
+.form-input {
+	color: #9399b2;
+	font-weight: 500;
+	border: none;
+	border-bottom: 1px dotted;
+	font-size: 1em;
+	outline: none;
+}
+
+.input-label {
+	color: #9399b2;
+	font-weight: bolder;
+	position: absolute;
+	left: 5px;
+	top: -6px;
+  transition:transform .15s ease;
+	pointer-events: none;
+}
+
+input:focus + .input-label {
+  transform: translateY(-100%);
+}
+
 #template {
-    color: yellow;
-    padding-left: 1%;
+	display: flex;
+	flex-direction: column;
 }
-#pilihan {
-    width: 100%;
-    height: 100%;
-    padding-left: 1%;
-    padding-bottom: 1%;
-    padding-right: 10%;
+
+#template #tombol {
+	display: flex;
+	justify-content: flex-start;
+	gap: 1em;
+	padding-left: 15px;
+	padding-top: 5px;
+	flex-wrap: wrap;
+	height: 38px;
 }
-button {
-    margin-right: 0.5%;
+
+#template #tombol button {
+	border: none;
+	color: #cdd6f4;
+	position: relative;
+	outline: none;
+	padding: 5px;
+	overflow: hidden;
+	cursor: pointer;
 }
-#isi-kopipasta {
-    color: yellow;
-    padding-left: 1%;
+
+
+#template #tombol button:focus {
+	color: #f5e0dc;
 }
+
+#template #tombol button:hover {
+	color: #f5e0dc;
+	transition: all 300ms ease;
+}
+
+#template #tombol button:hover:after{
+	right: 0;
+}
+
+#template #tombol button:after {
+	content: "";
+	right: 100%;
+	transition: all 300ms ease;
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	bottom: 1px;
+	background-color: #f5c2e7;
+}
+
 #hasil {
-    width: 1000px;
-    height: 350px;
-    border-style: solid;
-    border-color: aqua;
+	color: #9399b2;
+	font-weight: bolder;
+	display: flex;
+	position: relative;
+	flex-direction: column;
 }
-#hasilWaifu {
-    width: 955px;
-    height: 100px;
-    color: white;
-    padding: 2%;
-    cursor: pointer;
+
+#template h3 {
+	color: #9399b2;
+	display: inline;
+	font-weight: bolder;
+	padding-bottom: 0;
 }
