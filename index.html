@@ -1,39 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=, initial-scale=1.0">
-	<title>Stress Generator</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<h1>Selamat datang di Stress Generator!</h1>
-	<br>
-	<div id="nama-waifu">
-		<h3>Nama Waifu</h3>
-		<input type="text" placeholder="Ketikkan di sini" id="waifu" oninput="inputan()">
-	</div>
-	<h3 id="template">Template</h3>
-	<div id="pilihan">
-		<button id="btn1" onclick="oncBtn1()">Wangy</button>
-		<button id="btn2" onclick="oncBtn2()">Crot</button>
-		<button id="btn3" onclick="oncBtn3()">Simp</button>
-		<button id="btn4" onclick="oncBtn4()">Isep</button>
-		<button id="btn5" onclick="oncBtn5()">Jilat</button>
-		<button id="btn6" onclick="oncBtn6()">Hina</button>
-		<button id="btn7" onclick="oncBtn7()">Nikah</button>
-		<button id="btn8" onclick="oncBtn8()">Agen</button>
-		<button id="btn9" onclick="oncBtn9()">Impregnate</button>
-		<button id="btn10" onclick="oncBtn10()">Simp (English)</button>
-		<button id="btn11" onclick="oncBtn11()">Breed</button>
-		<button id="btn12" onclick="oncBtn12()">Plap</button>
-	</div>
-	<div id="isi-kopipasta">
-		<h3 id="buat-hasil">Hasil Kopipasta</h3>
-		<div id="hasil">
-			<div id="hasilWaifu"></div>
+<html>
+	<head>
+		<title>stress generator</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+<!--		<script>
+			const input = document.getElementById("namaInput");
+			const label = input.nextElementSibling;
+
+			input.addEventListener("click", function () {
+				 if (input.value) {
+						 label.style.transform = "translateY(-100%)";
+			    } else {
+					   label.style.transform = "none";
+				 }
+			});
+
+			input.addEventListener("blur", function () {
+				 if (input.value) {
+						 input.blur(); // Menghilangkan fokus dari input
+				 }
+			});
+
+		</script> -->
+	</head>
+	<body>
+		<div id="nama">
+			<input type="text" id="namaInput" class="form-input" maxlength=16 oninput="inputan()">
+			<label id="namaIn" class="input-label">Nama</label>
 		</div>
-		<script src="backend.js"></script>
-	</div>
-</body>
+		<div id="template">
+			<h3>Templates</h3>
+			<div id="tombol">
+				<button id="btn1" onclick="oncBtn1()">Wangy</button>
+				<button id="btn2" onclick="oncBtn2()">Crot</button>
+				<button id="btn3" onclick="oncBtn3()">Simp</button>
+				<button id="btn4" onclick="oncBtn4()">Isep</button>
+				<button id="btn5" onclick="oncBtn5()">Jilat</button>
+				<button id="btn6" onclick="oncBtn6()">Hina</button>
+				<button id="btn7" onclick="oncBtn7()">Nikah</button>
+				<button id="btn8" onclick="oncBtn8()">Agen</button>
+				<button id="btn9" onclick="oncBtn9()">Impregnate</button>
+				<button id="btn10" onclick="oncBtn10()">Simp (English)</button>
+				<button id="btn11" onclick="oncBtn11()">Breed</button>
+				<button id="btn12" onclick="oncBtn12()">Plap</button>		
+			</div>
+		</div>
+		<div id="hasil">
+			<h3>Hasil</h3>
+			<div id="hasilWaifu"></div>
+			<script src="backend.js"></script>
+		</div>
+	</body>
 </html>
