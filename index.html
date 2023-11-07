@@ -3,29 +3,10 @@
 	<head>
 		<title>stress generator</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
-<!--		<script>
-			const input = document.getElementById("namaInput");
-			const label = input.nextElementSibling;
-
-			input.addEventListener("click", function () {
-				 if (input.value) {
-						 label.style.transform = "translateY(-100%)";
-			    } else {
-					   label.style.transform = "none";
-				 }
-			});
-
-			input.addEventListener("blur", function () {
-				 if (input.value) {
-						 input.blur(); // Menghilangkan fokus dari input
-				 }
-			});
-
-		</script> -->
 	</head>
 	<body>
 		<div id="nama">
-			<input type="text" id="namaInput" class="form-input" maxlength=16 oninput="inputan()">
+			<input type="text" id="namaInput" class="form-input" maxlength=16 oninput="inputan()" autocomplete="off" required>
 			<label id="namaIn" class="input-label">Nama</label>
 		</div>
 		<div id="template">
