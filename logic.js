@@ -10,12 +10,20 @@ const btn9 = document.getElementById('btn9');
 const btn10 = document.getElementById('btn10');
 const btn11 = document.getElementById('btn11');
 const btn12 = document.getElementById('btn12');
+const btn13 = document.getElementById('btn13');
 let currentBotton = 1;
 
 
 function inputan() {
     return document.getElementById('namaInput').value.toUpperCase();
 }
+
+String.prototype.toCamelCase = function() {
+    return this.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, function(match, index) {
+        if (+match === 0) return ""; // or if (/\s+/.test(match)) for white spaces
+        return index === 0 ? match.toUpperCase() : match.toLowerCase();
+    });
+};
 
 function oncBtn1() {
     let namaWaifu = inputan();
@@ -100,6 +108,13 @@ function oncBtn12() {
     hasilWaifu.innerHTML = `EVEN BETTER, I'M INTO THAT C'MON NOW ${namaWaifu}, BRATTY MOMMY, TIME FOR SOME MUCH NEEDED CORRECTION FOR NOT USING AN ANTICONCEPTIONAL PILL💢💢💢💢💢💢 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 UUUUUUOOOOOOOHHHHHHH!!!!!! ${namaWaifu}-SAMAAA I'M GOING TO CUM💦💦💦💢💢💢💢 *ejaculation sound ejaculation sound* HUFF PUFF HUFF PUFF ~EVEN WHEN CARRYING A BABY YOU CAN STILL HANDLE IT VERY ROUGHLY~ ~WELL LET'S SEE IF YOU CAN HANDLE A ROUND TWO~ PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 PLAP PLAP PLAP💦💦💦 AAAAAAIIIIIIIIIIIIHHHHH I GOT CORRECTED A SECOND TIME >\\<💢💢💢💢 UUUUOOOOHHHHH!!!!!!!!! 💦💦💦💦💦💢💢💢💢 *ejaculation sound ejaculation sound* ${namaWaifu} CORRECTED AGAIN💢💢💢`;
 }
 
+function oncBtn13() {
+    let namaWaifu = inputan().toCamelCase();
+    
+    let hasilWaifu = document.getElementById('hasilWaifu');
+    hasilWaifu.innerHTML = `Dulu ibuku pernah bilang, "Kamu gak usah mikirin pacar-pacaran! Kalau kamu rajin belajar, terus pas udah besar jadi orang pintar, nanti ada cewek cantik yang mau sama kamu!". Aku sempat meragukan nasihat ibuku. Namun, beberapa tahun kemudian, setelah aku dewasa, aku menyadari bahwa ucapannya memang benar. Soalnya cewek anime yang bernama ${namaWaifu} yang menjadi istriku cantik banget busettt.`;
+}
+
 btn1.addEventListener('click', () => {
     currentBotton = 1;
 })
@@ -136,6 +151,9 @@ btn11.addEventListener('click', () => {
 btn12.addEventListener('click', () => {
     currentBotton = 12;
 })
+btn13.addEventListener('click', () => {
+    currentBotton = 13;
+})
 
 function updateNamaWaifu() {
     if (currentBotton === 1) {
@@ -162,6 +180,8 @@ function updateNamaWaifu() {
         oncBtn11();
     }else if (currentBotton === 12) {
         oncBtn12();
+    }else if (currentBotton === 13) {
+        oncBtn13();
     }else {
         oncBtn1;
     }
